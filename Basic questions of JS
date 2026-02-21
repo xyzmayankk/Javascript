@@ -63,3 +63,52 @@ if (num4[num4.length - 1] === num5[num5.length -1]) {
 else {
     console.log("The two numbers have different last digits.")
 }
+
+
+
+//first
+let arr = [1,7,5,9,4];
+
+let n1 = prompt("Enter value of n1 :");
+console.log(arr.slice(0,n1));
+
+//second
+let n2 = prompt("Enter value of n2 :");
+console.log(arr.slice(-n2));
+
+//third
+let str1 = "smitaa sharma";
+ 
+if (str1.includes(" ")) {
+    console.log("contains empty string");
+}
+else {
+    console.log("do not contains empty string");
+}
+
+//fourth
+let str2 = "l love you Smitaaa";
+
+if (str2[11] == str2[11].toLowerCase()) {
+    console.log("character is lowercase.");
+}
+else {
+    console.log("character is not lowercase.");
+}
+
+//fifth
+let str3 = prompt("Enter your string :");
+
+console.log(`original string is ${str3}`);
+console.log(`string without spaces is ${str3.trim()}`);
+
+//sixth
+let arr1 = ["mayank", "loves", "smitaaa"];
+let n = "mayank";
+
+if (arr1.indexOf(n) != -1) {
+    console.log("string exists in parent string");
+}
+else {
+    console.log("string does not exists");
+}
