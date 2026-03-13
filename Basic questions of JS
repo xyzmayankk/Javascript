@@ -112,3 +112,58 @@ if (arr1.indexOf(n) != -1) {
 else {
     console.log("string does not exists");
 }
+
+
+//question 1
+let number = [1,2,3,4,5,6,2,3,7,8];
+
+for(let i=0; i<number.length; i++){
+    if (number[i]==2){
+       number.splice(i,1);
+    }
+}
+console.log(number);
+
+//question 2
+let num1 = 16352;
+let count = 0;
+
+let copy1=num1;
+
+while(copy1>0) {
+    count++;
+    copy1 = Math.floor(copy1/10);
+}
+console.log(count);
+
+//question 3
+let num2 = 2828162;
+let sum = 0;
+
+let copy2 = num2;
+
+while(copy2>0) {
+    sum=sum + (copy2%10);
+    copy2 = Math.floor(copy2/10);
+}
+
+console.log(sum);
+
+//question 4
+let num = 7;
+let factorial = 1;
+ for (let i = 1; i<=num; i++) {
+    factorial *= i;
+ }
+  console.log(factorial);
+
+//question 5
+let array = [11,23,78,97,24,64,12,45];
+
+let largest_num = 0;
+for (let i = 0; i<array.length; i++) {
+    if (array[i] > largest_num) {
+        largest_num = array[i];
+    }
+}
+console.log(largest_num);
