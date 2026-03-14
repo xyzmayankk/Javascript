@@ -18,7 +18,7 @@ while (true) {
     }
 
     if (Number(guess) === num) {
-        console.log ("you guessed it right!");
+        console.log ("you guessed it right!, your random number was :", num);
         break;
     }
     else if(Number(guess) < num) {
