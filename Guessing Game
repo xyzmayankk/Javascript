@@ -1,0 +1,29 @@
+let n = Number(prompt("Enter number 1 :"));
+let m = Number(prompt("Enter number2 :"));
+
+let p = Math.max(n,m);
+console.log(p);
+
+let q = Math.min(n,m);
+console.log(q);
+
+let num = Math.floor(Math.random() * (p - q + 1)) + q;
+
+let guess = prompt("Enter your guess :");
+console.log(guess);
+
+while (true) {
+    if (guess == "quit"){
+        console.log("user quitted!");
+        break;
+    }
+
+    if (Number(guess) === num) {
+        console.log ("you guessed it right!");
+        break;
+    }
+    else {
+        guess = prompt("you are wrong, Please try again!");
+        console.log(guess);
+    }
+}
