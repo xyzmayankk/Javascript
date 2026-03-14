@@ -7,10 +7,9 @@ console.log(p);
 let q = Math.min(n,m);
 console.log(q);
 
-let num = Math.floor(Math.random() * (p - q + 1)) + q;
+const num = Math.floor(Math.random() * (p - q + 1)) + q;
 
 let guess = prompt("Enter your guess :");
-console.log(guess);
 
 while (true) {
     if (guess == "quit"){
@@ -22,8 +21,10 @@ while (true) {
         console.log ("you guessed it right!");
         break;
     }
+    else if(Number(guess) < num) {
+        guess = prompt("Your guess was too small");
+    }
     else {
-        guess = prompt("you are wrong, Please try again!");
-        console.log(guess);
+        guess = prompt("Your guess was too large");
     }
 }
