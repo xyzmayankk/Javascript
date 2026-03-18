@@ -167,3 +167,26 @@ for (let i = 0; i<array.length; i++) {
     }
 }
 console.log(largest_num);
+
+
+//question1
+dice_roll = Math.floor(Math.random() * 6) + 1;
+console.log(dice_roll);
+
+//question2
+const car = {
+    name: "Mercedes",
+    model: "GLS-2100",
+    color: "z-black",
+}
+console.log(car.name);
+
+//question3
+const person = {
+    name: "Mayank",
+    age: 20,
+    city: "Delhi",
+}
+person.city = "New York";
+person.country = "United States";
+console.log(person);
