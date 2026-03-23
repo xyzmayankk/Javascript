@@ -1,0 +1,77 @@
+//question1
+let n = 6;
+let arr = [2, 6, 8, 3, 9, 7];
+
+function largerElements(arr, n) {
+    let max = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > n) {
+            max.push(arr[i]);
+        }
+    }
+    return max;
+}
+
+console.log(largerElements(arr, n));
+
+//question2
+let str = "abcdabcdefgggh";
+
+function uniqueChar(str) {
+    let result = "";
+    for (let i = 0; i < str.length; i++) {
+        if (!result.includes(str[i])) {
+            result += str[i];
+        }
+    }
+    return result;
+}
+
+console.log(uniqueChar(str));
+
+//question3
+let countryArr = ["Australia", "Germany", "India", "Europe", "America"];
+
+function longestCountryName(countryArr) {
+    let longestName = "";
+    for (let i = 0; i < countryArr.length; i++) {
+        if (countryArr[i].length > longestName.length) {
+            longestName = countryArr[i];
+        }
+    }
+    return longestName;
+}
+
+console.log(longestCountryName(countryArr));
+
+//question4
+let str1 = "I love youu Smitaa";
+
+function countVowels(str) {
+    let count = 0;
+    for (let i = 0; i < str1.length; i++) {
+        if (str1.charAt(i) == "a" ||
+            str1.charAt(i) == "e" ||
+            str1.charAt(i) == "i" ||
+            str1.charAt(i) == "o" ||
+            str1.charAt(i) == "u" ||
+            str1.charAt(i) == "A" ||
+            str1.charAt(i) == "E" ||
+            str1.charAt(i) == "I" ||
+            str1.charAt(i) == "O" ||
+            str1.charAt(i) == "U") {
+            count++;
+        }
+    }
+    return count;
+}
+
+console.log(countVowels(str1));
+
+//question5
+function randomInteger(start, end) {
+    let ans = Math.floor(Math.random() * (end - start + 1)) + start;
+    return ans;
+}
+
+console.log(randomInteger(1, 5));
