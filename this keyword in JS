@@ -1,0 +1,14 @@
+const student = {
+    name: "Mayank",
+    age: 19,
+    eng: 93,
+    math: 86,
+    phy: 85,
+    getAvg() {
+        console.log(this);
+        let avg = (this.eng + this.math + this.phy) / 3;
+        console.log(`${this.name} got avg = ${avg} marks.`);
+    }
+};
+
+student.getAvg();
