@@ -22,3 +22,55 @@ const student = {
         }, 2000)
     }
 };
+
+
+//question1 
+let arr = [23, 56, 45, 78, 25, 98];
+const arrayAvg = (arr) => {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+    return sum / arr.length;
+}
+
+console.log(arrayAvg(arr));
+
+//question2
+const isEven = (n) => {
+    if (n % 2 == 0) {
+        console.log(`${n} is even`);
+    }
+    else {
+        console.log(`${n} is odd`);
+    }
+}
+
+isEven(23);
+
+//question3
+let length = 4;
+function callback() {
+    console.log(this.length);
+}
+
+const object = {
+    length: 5,
+    method(callback) {
+        callback(); //regular function --> window.object refer kra which equals to 0, agar yahi pr callback.call(object) hota toh length = 5 print hota
+    }
+}
+
+object.method(callback);
+
+//question4
+const object1 = {
+    message: "Hello World!",
+
+    logMessage() {
+        console.log(this.message);
+    }
+}
+
+setTimeout(object.logMessage, 1000); // object.logMessage regular fn ki tarah behave krega jisse this.message undefined aayega kyuki this window ko refer kr rha h 
+object1.logMessage(); //yaha pr output apna hello world oprint ho jaayega kyuki specified kra h apn ne ki object1 ka hi function use krna h aur woh fn as per the object behave krega
