@@ -1,0 +1,24 @@
+const student = {
+    name: "Smitaa",
+    marks: 95,
+    age: 19,
+    prop: this, //global scope
+    getName: function () {
+        console.log(this);
+        return this.name;
+    },
+    getMarks: () => {
+        console.log(this); //parent's scope
+        return this.marks;
+    },
+    getInfo1: function () {
+        setTimeout(() => {
+            console.log(this); //student object --> lexical scope 
+        }, 2000)
+    },
+    getInfo2: function () {
+        setTimeout(function () {
+            console.log(this); //window object aaya --> parent's scope aaya
+        }, 2000)
+    }
+};
