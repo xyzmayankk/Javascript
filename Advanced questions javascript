@@ -75,3 +75,27 @@ function randomInteger(start, end) {
 }
 
 console.log(randomInteger(1, 5));
+
+
+//QUESTION1
+const square = (n) => {
+    return n * n;
+}
+
+console.log(square(7));
+
+//QIESTION2
+const print = function () {
+    const intervalID = setInterval(() => {
+        for (let i = 1; i <= 5; i++) {
+            console.log("Hello World!");
+        }
+    }, 2000);
+
+    setTimeout(() => {
+        clearInterval(intervalID);
+    }, 10000);
+}
+
+
+print();
