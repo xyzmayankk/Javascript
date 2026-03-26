@@ -1,4 +1,4 @@
-//question1
+-//question1
 let num = [10, 60, 400, 50, 800];
 
 let check = num.every((el) => {
@@ -21,3 +21,42 @@ let check1 = num1.reduce((min, el) => {
 )
 
 console.log(check1);
+
+
+//question1
+const nums = [1, 2, 3, 4, 5];
+
+const array = nums.map((el) => (el * el));
+console.log(array);
+
+const sum = array.reduce((sum, el) => (sum + el));
+console.log(sum / nums.length);
+
+//question2
+const arr = ["mayank", "smitaa", "shobhit", "alakh"];
+
+const upperArr = arr.map((el) => (el.toUpperCase()));
+console.log(upperArr);
+
+//question3
+const newNums = nums.map((el) => (el + 5));
+console.log(newNums);
+
+//question4
+const arr1 = [1, 4, 8, 3, 2];
+
+const doubleAndReturnArgs = function (arr, ...args) {
+    return [...arr, ...args.map((el) => el * 2)];
+}
+
+console.log(doubleAndReturnArgs(arr1, 1, 2, 3, 4));
+
+//question5
+const mergeObject = (obj1, obj2) => (
+    {
+        ...obj1,
+        ...obj2
+    }
+);
+
+console.log(mergeObject({ name: "mayank" }, { age: 21 }));
