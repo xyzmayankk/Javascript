@@ -28,3 +28,39 @@ HTML
 </body>
 
 </html>
+
+
+----------------------
+
+
+//question1
+let button = document.createElement("button");
+button.innerText = "Click Me!"
+
+let body = document.querySelector("body");
+body.append(button);
+
+let btn = document.querySelector("button");
+
+btn.addEventListener("click", function () {
+    btn.classList.add("btn");
+})
+
+//question2
+let input = document.querySelector("#text");
+let h1 = document.querySelector("h1");
+
+input.addEventListener("change", function () {
+    console.log(input.value);
+    let cleanedValue = input.value.replace(/[^a-zA-Z]/g, "");
+    h1.innerText = cleanedValue;
+})
+
+//question3
+input.addEventListener("mouseout", function () {
+    input.style.color = "coral";
+})
+
+input.addEventListener("mouseover", function () {
+    input.style.color = "black";
+})
